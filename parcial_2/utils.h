@@ -1,6 +1,9 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#define DEFAULT_PORT 9000 
+#include <stddef.h>
+
 struct host_info {
     char ip[32];
     float cpu_usage;
@@ -11,6 +14,7 @@ struct host_info {
     float mem_free_mb;
     float swap_total_mb;
     float swap_free_mb;
-};
+    size_t counter;
+} host_info;
 
 #endif
